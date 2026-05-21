@@ -1,6 +1,91 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><title>EON</title>
-<style>body{font:16px/1.7 -apple-system,"PingFang SC",sans-serif;max-width:640px;margin:60px auto;padding:0 20px}a{display:block;margin:10px 0}</style>
-</head><body><h1>EON</h1><p>Subscription tracker.</p>
-<a href="privacy.html">Privacy Policy / 隐私政策</a>
-<a href="terms.html">Terms of Use / 使用条款</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EON — Subscription Tracker</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){try{var l=localStorage.getItem('eon-lang');
+if(!l){l=(navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en';}
+document.documentElement.setAttribute('data-lang',l);}catch(e){
+document.documentElement.setAttribute('data-lang','en');}})();
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <a class="brand" href="index.html"><img src="icon.png" alt="EON"> EON</a>
+    <div class="langtoggle">
+      <button data-l="zh" onclick="eonSetLang('zh')">中文</button>
+      <button data-l="en" onclick="eonSetLang('en')">EN</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img class="appicon" src="icon.png" alt="EON app icon">
+    <h1>EON</h1>
+    <p class="tag">
+      <span class="zh">看清你的每一笔订阅</span>
+      <span class="en">See every subscription clearly</span>
+    </p>
+    <p class="sub">
+      <span class="zh">EON 帮你记录订阅、提前提醒续费、看清钱花在了哪里 —— 简洁、好看、隐私优先。</span>
+      <span class="en">EON tracks your subscriptions, reminds you before renewals, and shows where your money goes — simple, beautiful, and privacy-first.</span>
+    </p>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <div class="emoji">📊</div>
+      <h3><span class="zh">总览统计</span><span class="en">Overview &amp; stats</span></h3>
+      <p><span class="zh">月 / 季 / 年总额、分类饼图、累计支付,一眼看清。</span>
+         <span class="en">Monthly, quarterly &amp; yearly totals, a category breakdown, and lifetime spend at a glance.</span></p>
+    </div>
+    <div class="card">
+      <div class="emoji">🔔</div>
+      <h3><span class="zh">续费提醒</span><span class="en">Renewal reminders</span></h3>
+      <p><span class="zh">扣费前本地通知,还能一键加到 Apple 提醒事项。</span>
+         <span class="en">Local notifications before each charge — optionally added to Apple Reminders.</span></p>
+    </div>
+    <div class="card">
+      <div class="emoji">🌍</div>
+      <h3><span class="zh">多币种</span><span class="en">Multi-currency</span></h3>
+      <p><span class="zh">每天自动更新汇率,统一折算成你的主币种。</span>
+         <span class="en">Daily exchange-rate updates, all converted to your base currency.</span></p>
+    </div>
+    <div class="card">
+      <div class="emoji">☁️</div>
+      <h3><span class="zh">iCloud 同步</span><span class="en">iCloud sync</span></h3>
+      <p><span class="zh">多设备同步;数据只在你自己的 iCloud,我们看不到。</span>
+         <span class="en">Sync across devices through your own iCloud — we never see it.</span></p>
+    </div>
+    <div class="card">
+      <div class="emoji">🧩</div>
+      <h3><span class="zh">桌面小组件</span><span class="en">Widgets</span></h3>
+      <p><span class="zh">下次扣费、本月总额、本月清单,主屏锁屏随时一眼看到。</span>
+         <span class="en">Next charge, monthly total, and this month's list on your Home &amp; Lock Screen.</span></p>
+    </div>
+    <div class="card">
+      <div class="emoji">🔒</div>
+      <h3><span class="zh">隐私优先</span><span class="en">Privacy-first</span></h3>
+      <p><span class="zh">无账号、无广告、无追踪,数据留在你的设备上。</span>
+         <span class="en">No account, no ads, no tracking — your data stays on device.</span></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy</span></a>
+      <a href="terms.html"><span class="zh">使用条款</span><span class="en">Terms</span></a>
+      <a href="changelog.html"><span class="zh">更新日志</span><span class="en">Changelog</span></a>
+    </div>
+    <p>© 2026 EON · <a href="mailto:eatpoc@gmail.com">eatpoc@gmail.com</a></p>
+  </footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EON — Changelog / 更新日志</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){try{var l=localStorage.getItem('eon-lang');
+if(!l){l=(navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en';}
+document.documentElement.setAttribute('data-lang',l);}catch(e){
+document.documentElement.setAttribute('data-lang','en');}})();
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <a class="brand" href="index.html"><img src="icon.png" alt="EON"> EON</a>
+    <div class="langtoggle">
+      <button data-l="zh" onclick="eonSetLang('zh')">中文</button>
+      <button data-l="en" onclick="eonSetLang('en')">EN</button>
+    </div>
+  </header>
+
+  <main class="doc">
+    <h1><span class="zh">更新日志</span><span class="en">Changelog</span></h1>
+    <p class="muted">
+      <span class="zh">EON 的版本更新记录。</span>
+      <span class="en">Release history for EON.</span>
+    </p>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.0</h3>
+        <span class="date">2026-05</span>
+      </div>
+      <ul class="en">
+        <li>First release: subscription management, overview stats, categories, and lifetime spend.</li>
+        <li>Multi-currency support with daily exchange-rate updates.</li>
+        <li>Local notifications with a per-subscription reminder lead time.</li>
+        <li>Set an end date and the subscription auto-archives when it's due.</li>
+        <li>iCloud sync; export to Markdown / JSON.</li>
+        <li>Home &amp; Lock Screen widgets: next charge, monthly total, this month's list.</li>
+        <li>A few easter eggs: shake to spotlight, daily confetti, subscription balls.</li>
+      </ul>
+      <ul class="zh">
+        <li>首个版本:订阅管理、总览统计、分类与累计支付。</li>
+        <li>支持多币种,每日自动更新汇率。</li>
+        <li>本地通知提醒,可按每个订阅单独设置提前天数。</li>
+        <li>可设置订阅结束日期,到期自动归档。</li>
+        <li>iCloud 同步;支持导出为 Markdown / JSON。</li>
+        <li>桌面 / 锁屏小组件:下次扣费、本月总额、本月清单。</li>
+        <li>一点小玩具:摇一摇聚焦、每日彩带、订阅小球。</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="index.html"><span class="zh">首页</span><span class="en">Home</span></a>
+      <a href="privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy</span></a>
+      <a href="terms.html"><span class="zh">使用条款</span><span class="en">Terms</span></a>
+    </div>
+    <p>© 2026 EON · <a href="mailto:eatpoc@gmail.com">eatpoc@gmail.com</a></p>
+  </footer>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
