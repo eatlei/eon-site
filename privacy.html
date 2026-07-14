@@ -40,6 +40,7 @@ document.documentElement.setAttribute('data-lang','en');}})();
       <ul>
         <li><strong>Exchange rates</strong> — EON fetches daily currency rates from <code>open.er-api.com</code>. The request contains no personal data.</li>
         <li><strong>App icon search</strong> — when you search for an app icon, EON queries Apple's iTunes Search API (<code>itunes.apple.com</code>) with the term you type. No personal data is sent.</li>
+        <li><strong>Website icon fetch</strong> — when you fetch an icon by URL (for Mac apps or web services), EON sends only that domain to an icon service (<code>icon.horse</code>, falling back to Google's favicon service) to retrieve the icon. No personal data is sent.</li>
       </ul>
       <h2>Notifications &amp; Reminders</h2>
       <p>Renewal reminders are <strong>local notifications</strong> generated on your device. If you choose to add a reminder to Apple Reminders, EON writes it to your own Reminders only after you grant permission and tap to confirm.</p>
@@ -72,6 +73,7 @@ document.documentElement.setAttribute('data-lang','en');}})();
       <ul>
         <li><strong>汇率</strong> —— EON 会从 <code>open.er-api.com</code> 获取每日汇率,请求中不包含任何个人数据。</li>
         <li><strong>App 图标搜索</strong> —— 当你搜索 App 图标时,EON 会用你输入的关键词调用 Apple 的 iTunes 搜索接口(<code>itunes.apple.com</code>),不发送任何个人数据。</li>
+        <li><strong>网址取图标</strong> —— 当你通过网址获取图标时(用于 Mac 软件或网页服务),EON 只把该域名发给取图标服务(<code>icon.horse</code>,失败时回落到 Google 的 favicon 服务)以获取图标,不发送任何个人数据。</li>
       </ul>
       <h2>通知与提醒事项</h2>
       <p>续费提醒是在你设备本地生成的<strong>本地通知</strong>。若你选择把提醒加入"提醒事项",EON 只会在你授权并点击确认后,把它写入你自己的"提醒事项"。</p>
