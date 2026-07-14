@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EON — Changelog / 更新日志</title>
 <link rel="icon" href="icon.png">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 <script>
 (function(){try{var l=localStorage.getItem('eon-lang');
 if(!l){l=(navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en';}
@@ -42,27 +42,78 @@ document.documentElement.setAttribute('data-lang','en');}})();
       <div class="en">
         <h4>New</h4>
         <ul>
-          <li>Spending Trends: a new card on Overview charts your spending by month, quarter, or year, with month-over-month change and a bar / line toggle.</li>
-          <li>Native iPad &amp; Mac layout with a proper sidebar, so EON feels at home on larger screens.</li>
-          <li>New welcome guide that walks you through what EON does on first launch.</li>
-          <li>Fetch icons by URL — paste a website or Mac-app address and EON grabs its icon; Mac App Store search is now built in too.</li>
+          <li>Spending Trends: view your spending by month, quarter, or year on Overview, with period-over-period change and a bar / line toggle.</li>
+          <li>Fetch icons by URL, with built-in Mac App Store search — web services and Mac apps can have icons too.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>Unified the selection menus across the app — icon on the left, text aligned.</li>
         </ul>
         <h4>Fixed</h4>
         <ul>
-          <li>Fixed iCloud icon sync, and refined selection menus, payment-method display, and localisation.</li>
+          <li>Fixed payment methods showing mixed Chinese text and a jumping width in the English UI.</li>
         </ul>
       </div>
       <div class="zh">
         <h4>新增</h4>
         <ul>
-          <li>支出趋势:总览新增趋势卡片,按月 / 季 / 年查看支出走势与环比,可切换条形图 / 折线图。</li>
-          <li>iPad 与 Mac 原生适配,配备侧边栏,大屏使用更自在。</li>
-          <li>新增上手引导,第一次打开就能了解 EON 能做什么。</li>
-          <li>按网址取图标 —— 粘贴网页或 Mac 软件地址即可获取图标;并内置 Mac App Store 搜索。</li>
+          <li>支出趋势:总览按月 / 季 / 年查看支出走势与环比,可切换条形图 / 折线图。</li>
+          <li>按网址取图标,并内置 Mac App Store 搜索 —— 网页服务、Mac 软件也能配图标。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>统一各处「选择框」菜单样式(图标左对齐、文本对齐)。</li>
         </ul>
         <h4>修复</h4>
         <ul>
-          <li>修复 iCloud 图标同步;优化选择菜单、支付方式显示与多语言。</li>
+          <li>修复英文界面下支付方式混入中文、显示宽度忽长忽短。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.0.2</h3>
+        <span class="date">2026-07-11</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>New welcome guide — understand EON at a glance on first launch.</li>
+          <li>Native iPad sidebar that collapses into a top tab bar for comfortable use on larger screens.</li>
+          <li>App Store icon search: added a search button and a flag-based region switcher.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>Subscription amounts now roll when you switch Monthly / Quarterly / Yearly.</li>
+          <li>More reliable renewal reminder notifications.</li>
+          <li>Improved date readability on coloured cards in the editor.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Fixed iCloud icon sync so icons no longer go missing; added a “Repair Icons” button under iCloud &amp; Data.</li>
+          <li>Fixed the Rate App button that couldn’t be tapped.</li>
+          <li>Fixed letter icons showing only a colour block in the calendar.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>全新上手引导,第一次打开一眼看懂。</li>
+          <li>iPad 原生侧边栏,收起化为顶部标签栏,大屏更顺手。</li>
+          <li>App Store 找图标:新增搜索按钮 + 国旗切换地区。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>金额在切换 月 / 季 / 年 时数字滚动。</li>
+          <li>提升续费提醒的通知可靠性。</li>
+          <li>改善编辑页日期在彩色卡片上的可读性。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>修复 iCloud 图标同步问题,「iCloud 与数据」新增「修复图标」按钮。</li>
+          <li>修复「评价 App」按钮无法点击。</li>
+          <li>修复日历中字母图标只显示色块。</li>
         </ul>
       </div>
     </div>
@@ -73,37 +124,15 @@ document.documentElement.setAttribute('data-lang','en');}})();
         <span class="date">2026-07-09</span>
       </div>
       <div class="en">
-        <h4>New</h4>
-        <ul>
-          <li>Native iPad layout: a new sidebar that collapses into a top tab bar for comfortable browsing on larger screens.</li>
-          <li>App Store icon search: added a search button and a flag-based region switcher.</li>
-        </ul>
-        <h4>Improved</h4>
-        <ul>
-          <li>Subscription amounts now roll when you switch Monthly / Quarterly / Yearly.</li>
-          <li>Improved date readability on coloured cards in the editor.</li>
-        </ul>
         <h4>Fixed</h4>
         <ul>
-          <li>Fixed iCloud icon sync so icons no longer go missing; added a “Repair Icons” button under iCloud &amp; Data to restore them from iCloud in one tap.</li>
-          <li>More reliable renewal reminder notifications.</li>
+          <li>Fixed an issue where App Store icon search wouldn’t start.</li>
         </ul>
       </div>
       <div class="zh">
-        <h4>新增</h4>
-        <ul>
-          <li>iPad 原生适配:全新侧边栏,收起后化为顶部标签栏,大屏浏览更顺手。</li>
-          <li>App Store 找图标:新增搜索按钮,并用国旗切换地区,操作更清晰。</li>
-        </ul>
-        <h4>优化</h4>
-        <ul>
-          <li>订阅金额在切换 月 / 季 / 年 时数字滚动,更有质感。</li>
-          <li>改善编辑页日期在彩色卡片上的可读性。</li>
-        </ul>
         <h4>修复</h4>
         <ul>
-          <li>修复 iCloud 图标同步问题,图标不再丢失;「iCloud 与数据」新增「修复图标」按钮,可一键从 iCloud 找回。</li>
-          <li>提升续费提醒的通知可靠性。</li>
+          <li>修复搜索 App Store 图标时无法触发搜索的问题。</li>
         </ul>
       </div>
     </div>
@@ -160,6 +189,6 @@ document.documentElement.setAttribute('data-lang','en');}})();
   </footer>
 
 </div>
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>
