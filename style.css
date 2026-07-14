@@ -57,14 +57,39 @@ header.bar{display:flex;align-items:center;justify-content:space-between;
   border-radius:6px;padding:1px 6px;font-size:13px}
 .muted{color:var(--sec);font-size:14px}
 
-/* changelog */
-.release{background:var(--surface);border:1px solid var(--line);border-radius:18px;
-  padding:18px 20px;margin:16px 0}
-.release .ver{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.release h3{margin:0;font-size:18px}
-.release .date{color:var(--sec);font-size:14px}
-.release ul{margin:12px 0 0;padding-left:20px}
-.release li{margin:6px 0}
+/* changelog — vertical timeline */
+.timeline{position:relative;margin:28px 0 0;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:5px;top:10px;bottom:14px;width:2px;
+  background:linear-gradient(var(--accent),var(--accent2));opacity:.35;border-radius:2px}
+.release{position:relative;background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;padding:18px 22px 20px;margin:0 0 20px}
+.release::before{content:"";position:absolute;left:-28px;top:23px;width:12px;height:12px;
+  border-radius:50%;background:var(--accent);border:3px solid var(--bg);
+  box-shadow:0 0 0 1px var(--line)}
+.release.latest::before{background:linear-gradient(130deg,var(--accent),var(--accent2))}
+.release .ver{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.release h3{margin:0;font-size:23px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.release.latest h3{background:linear-gradient(120deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.release .date{color:var(--sec);font-size:13px;margin-left:auto;font-variant-numeric:tabular-nums}
+.badge-latest{font:800 10px/1 inherit;letter-spacing:.07em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(120deg,var(--accent),var(--accent2));padding:4px 8px;border-radius:999px}
+.release ul{list-style:none;margin:15px 0 0;padding:0}
+/* flex row: tag fixed left, text as its own column so wrapped lines hang-indent
+   under the first text line (not under the tag) — key for readability on phones */
+.release li{display:flex;align-items:baseline;gap:9px;margin:11px 0;line-height:1.6}
+/* typed tag (label auto-localised via ::after) */
+.t{flex:none;display:inline-block;font:800 10.5px/1.5 inherit;letter-spacing:.03em;
+  text-transform:uppercase;padding:1px 7px;border-radius:6px;white-space:nowrap}
+.t-new{color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.t-imp{color:var(--accent2);background:color-mix(in srgb,var(--accent2) 14%,transparent)}
+.t-fix{color:var(--sec);background:color-mix(in srgb,var(--sec) 15%,transparent)}
+html[data-lang="en"] .t-new::after{content:"New"}
+html[data-lang="zh"] .t-new::after{content:"新增"}
+html[data-lang="en"] .t-imp::after{content:"Improved"}
+html[data-lang="zh"] .t-imp::after{content:"优化"}
+html[data-lang="en"] .t-fix::after{content:"Fixed"}
+html[data-lang="zh"] .t-fix::after{content:"修复"}
 
 /* footer */
 footer{border-top:1px solid var(--line);margin-top:56px;padding:26px 0 64px;
