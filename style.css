@@ -15,7 +15,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
   -webkit-font-smoothing:antialiased}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+@media(max-width:560px){.wrap{padding:0 28px}}
 
 /* top bar */
 header.bar{display:flex;align-items:center;justify-content:space-between;
@@ -61,18 +62,20 @@ header.bar{display:flex;align-items:center;justify-content:space-between;
 .timeline{margin:40px 0 0}
 .release{margin:0 0 44px;padding:0;background:none;border:0}
 .release + .release{border-top:1px solid var(--line);padding-top:42px}
-.release .ver{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
+.release .ver{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
 .release h3{margin:0;font-size:25px;font-weight:600;letter-spacing:-.02em;
   color:var(--ink);font-variant-numeric:tabular-nums}
 .badge-latest{font-size:11px;font-weight:600;letter-spacing:.1em;
   text-transform:uppercase;color:var(--sec)}
 .release .date{margin-left:auto;font-size:12px;letter-spacing:.06em;
   text-transform:uppercase;color:var(--sec);font-variant-numeric:tabular-nums}
-.release ul{list-style:none;margin:0;padding:0}
-/* plain text lines — no label, no bullet, whitespace-only rhythm */
-.release li{margin:0;padding:11px 0;line-height:1.7;font-size:15.5px;color:var(--ink)}
-/* type labels removed from view (kept in markup for future/scannability) */
-.t{display:none}
+/* grouped sections: New / Improved / Fixed heading + bulleted list */
+.release h4{margin:22px 0 4px;font-size:12px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--sec)}
+.release h4:first-child{margin-top:12px}
+.release ul{list-style:disc;margin:0;padding-left:20px}
+.release li{margin:0;padding:5px 0;line-height:1.7;font-size:15.5px;color:var(--ink)}
+.release li::marker{color:var(--sec)}
 
 /* footer */
 footer{border-top:1px solid var(--line);margin-top:56px;padding:26px 0 64px;

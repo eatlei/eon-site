@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EON — Changelog / 更新日志</title>
 <link rel="icon" href="icon.png">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <script>
 (function(){try{var l=localStorage.getItem('eon-lang');
 if(!l){l=(navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en';}
@@ -39,20 +39,32 @@ document.documentElement.setAttribute('data-lang','en');}})();
         <span class="badge-latest"><span class="zh">最新</span><span class="en">Latest</span></span>
         <span class="date">2026-07-14</span>
       </div>
-      <ul class="en">
-        <li><span class="t t-new"></span>Spending Trends: a new card on Overview charts your spending by month, quarter, or year, with month-over-month change and a bar / line toggle.</li>
-        <li><span class="t t-new"></span>Native iPad &amp; Mac layout with a proper sidebar, so EON feels at home on larger screens.</li>
-        <li><span class="t t-new"></span>New welcome guide that walks you through what EON does on first launch.</li>
-        <li><span class="t t-new"></span>Fetch icons by URL — paste a website or Mac-app address and EON grabs its icon; Mac App Store search is now built in too.</li>
-        <li><span class="t t-fix"></span>Fixed iCloud icon sync and refined selection menus, payment-method display, and localisation.</li>
-      </ul>
-      <ul class="zh">
-        <li><span class="t t-new"></span>支出趋势:总览新增趋势卡片,按月 / 季 / 年查看支出走势与环比,可切换条形图 / 折线图。</li>
-        <li><span class="t t-new"></span>iPad 与 Mac 原生适配,配备侧边栏,大屏使用更自在。</li>
-        <li><span class="t t-new"></span>新增上手引导,第一次打开就能了解 EON 能做什么。</li>
-        <li><span class="t t-new"></span>按网址取图标 —— 粘贴网页或 Mac 软件地址即可获取图标;并内置 Mac App Store 搜索。</li>
-        <li><span class="t t-fix"></span>修复 iCloud 图标同步,优化选择菜单、支付方式显示与多语言。</li>
-      </ul>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Spending Trends: a new card on Overview charts your spending by month, quarter, or year, with month-over-month change and a bar / line toggle.</li>
+          <li>Native iPad &amp; Mac layout with a proper sidebar, so EON feels at home on larger screens.</li>
+          <li>New welcome guide that walks you through what EON does on first launch.</li>
+          <li>Fetch icons by URL — paste a website or Mac-app address and EON grabs its icon; Mac App Store search is now built in too.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Fixed iCloud icon sync, and refined selection menus, payment-method display, and localisation.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>支出趋势:总览新增趋势卡片,按月 / 季 / 年查看支出走势与环比,可切换条形图 / 折线图。</li>
+          <li>iPad 与 Mac 原生适配,配备侧边栏,大屏使用更自在。</li>
+          <li>新增上手引导,第一次打开就能了解 EON 能做什么。</li>
+          <li>按网址取图标 —— 粘贴网页或 Mac 软件地址即可获取图标;并内置 Mac App Store 搜索。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>修复 iCloud 图标同步;优化选择菜单、支付方式显示与多语言。</li>
+        </ul>
+      </div>
     </div>
 
     <div class="release">
@@ -60,22 +72,40 @@ document.documentElement.setAttribute('data-lang','en');}})();
         <h3>v1.0.1</h3>
         <span class="date">2026-07-09</span>
       </div>
-      <ul class="en">
-        <li><span class="t t-new"></span>Native iPad layout: a new sidebar that collapses into a top tab bar for comfortable browsing on larger screens.</li>
-        <li><span class="t t-fix"></span>Fixed iCloud icon sync so icons no longer go missing; added a “Repair Icons” button under iCloud &amp; Data to restore them from iCloud in one tap.</li>
-        <li><span class="t t-new"></span>App Store icon search: added a search button and a flag-based region switcher.</li>
-        <li><span class="t t-imp"></span>Subscription amounts now roll when you switch Monthly / Quarterly / Yearly.</li>
-        <li><span class="t t-fix"></span>More reliable renewal reminder notifications.</li>
-        <li><span class="t t-imp"></span>Improved date readability on coloured cards in the editor.</li>
-      </ul>
-      <ul class="zh">
-        <li><span class="t t-new"></span>iPad 原生适配:全新侧边栏,收起后化为顶部标签栏,大屏浏览更顺手。</li>
-        <li><span class="t t-fix"></span>修复 iCloud 图标同步问题,图标不再丢失;「iCloud 与数据」新增「修复图标」按钮,可一键从 iCloud 找回。</li>
-        <li><span class="t t-new"></span>App Store 找图标:新增搜索按钮,并用国旗切换地区,操作更清晰。</li>
-        <li><span class="t t-imp"></span>订阅金额在切换 月 / 季 / 年 时数字滚动,更有质感。</li>
-        <li><span class="t t-fix"></span>提升续费提醒的通知可靠性。</li>
-        <li><span class="t t-imp"></span>改善编辑页日期在彩色卡片上的可读性。</li>
-      </ul>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Native iPad layout: a new sidebar that collapses into a top tab bar for comfortable browsing on larger screens.</li>
+          <li>App Store icon search: added a search button and a flag-based region switcher.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>Subscription amounts now roll when you switch Monthly / Quarterly / Yearly.</li>
+          <li>Improved date readability on coloured cards in the editor.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Fixed iCloud icon sync so icons no longer go missing; added a “Repair Icons” button under iCloud &amp; Data to restore them from iCloud in one tap.</li>
+          <li>More reliable renewal reminder notifications.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>iPad 原生适配:全新侧边栏,收起后化为顶部标签栏,大屏浏览更顺手。</li>
+          <li>App Store 找图标:新增搜索按钮,并用国旗切换地区,操作更清晰。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>订阅金额在切换 月 / 季 / 年 时数字滚动,更有质感。</li>
+          <li>改善编辑页日期在彩色卡片上的可读性。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>修复 iCloud 图标同步问题,图标不再丢失;「iCloud 与数据」新增「修复图标」按钮,可一键从 iCloud 找回。</li>
+          <li>提升续费提醒的通知可靠性。</li>
+        </ul>
+      </div>
     </div>
 
     <div class="release">
@@ -83,32 +113,38 @@ document.documentElement.setAttribute('data-lang','en');}})();
         <h3>v1.0</h3>
         <span class="date">2026-05-25</span>
       </div>
-      <ul class="en">
-        <li><span class="t t-new"></span>First release: subscription management, overview stats, categories, and lifetime spend.</li>
-        <li><span class="t t-new"></span>Multi-currency support with daily exchange-rate updates.</li>
-        <li><span class="t t-new"></span>Local notifications with a per-subscription reminder lead time.</li>
-        <li><span class="t t-new"></span>Set an end date and the subscription auto-archives when it's due.</li>
-        <li><span class="t t-new"></span>Archive and restore subscriptions without losing history.</li>
-        <li><span class="t t-new"></span>iCloud sync; export to Markdown / JSON.</li>
-        <li><span class="t t-new"></span>Home &amp; Lock Screen widgets: next charge, monthly total, this month's list.</li>
-        <li><span class="t t-new"></span>Subscription Personality — EON analyses your habits and assigns one of 12 personality types (AI Pioneer, Efficiency Hunter, Cloud Nomad …), with a shareable card.</li>
-        <li><span class="t t-new"></span>App icon customisation: Auto (follows system), Always Light, Always Dark, plus 11 personality-themed alternate icons.</li>
-        <li><span class="t t-new"></span>Appearance settings: accent colour picker, coloured subscription cards.</li>
-        <li><span class="t t-new"></span>A few easter eggs: shake to spotlight, daily confetti, subscription balls.</li>
-      </ul>
-      <ul class="zh">
-        <li><span class="t t-new"></span>首个版本:订阅管理、总览统计、分类与累计支付。</li>
-        <li><span class="t t-new"></span>支持多币种,每日自动更新汇率。</li>
-        <li><span class="t t-new"></span>本地通知提醒,可按每个订阅单独设置提前天数。</li>
-        <li><span class="t t-new"></span>可设置订阅结束日期,到期自动归档。</li>
-        <li><span class="t t-new"></span>订阅归档与恢复,保留完整历史记录。</li>
-        <li><span class="t t-new"></span>iCloud 同步;支持导出为 Markdown / JSON。</li>
-        <li><span class="t t-new"></span>桌面 / 锁屏小组件:下次扣费、本月总额、本月清单。</li>
-        <li><span class="t t-new"></span>订阅人格 —— EON 根据你的订阅分析出 12 种人格之一(AI 先驱、效率猎人、云端游民……),并生成可分享的人格卡片。</li>
-        <li><span class="t t-new"></span>App 图标自定义:自动跟随系统亮/暗、永久浅色、永久深色,以及 11 款人格专属图标。</li>
-        <li><span class="t t-new"></span>外观设置:主题色选择、彩色订阅卡片。</li>
-        <li><span class="t t-new"></span>一点小玩具:摇一摇聚焦、每日彩带、订阅小球。</li>
-      </ul>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>First release: subscription management, overview stats, categories, and lifetime spend.</li>
+          <li>Multi-currency support with daily exchange-rate updates.</li>
+          <li>Local notifications with a per-subscription reminder lead time.</li>
+          <li>Set an end date and the subscription auto-archives when it's due.</li>
+          <li>Archive and restore subscriptions without losing history.</li>
+          <li>iCloud sync; export to Markdown / JSON.</li>
+          <li>Home &amp; Lock Screen widgets: next charge, monthly total, this month's list.</li>
+          <li>Subscription Personality — EON analyses your habits and assigns one of 12 personality types (AI Pioneer, Efficiency Hunter, Cloud Nomad …), with a shareable card.</li>
+          <li>App icon customisation: Auto (follows system), Always Light, Always Dark, plus 11 personality-themed alternate icons.</li>
+          <li>Appearance settings: accent colour picker, coloured subscription cards.</li>
+          <li>A few easter eggs: shake to spotlight, daily confetti, subscription balls.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>首个版本:订阅管理、总览统计、分类与累计支付。</li>
+          <li>支持多币种,每日自动更新汇率。</li>
+          <li>本地通知提醒,可按每个订阅单独设置提前天数。</li>
+          <li>可设置订阅结束日期,到期自动归档。</li>
+          <li>订阅归档与恢复,保留完整历史记录。</li>
+          <li>iCloud 同步;支持导出为 Markdown / JSON。</li>
+          <li>桌面 / 锁屏小组件:下次扣费、本月总额、本月清单。</li>
+          <li>订阅人格 —— EON 根据你的订阅分析出 12 种人格之一(AI 先驱、效率猎人、云端游民……),并生成可分享的人格卡片。</li>
+          <li>App 图标自定义:自动跟随系统亮/暗、永久浅色、永久深色,以及 11 款人格专属图标。</li>
+          <li>外观设置:主题色选择、彩色订阅卡片。</li>
+          <li>一点小玩具:摇一摇聚焦、每日彩带、订阅小球。</li>
+        </ul>
+      </div>
     </div>
 
     </div>
@@ -124,6 +160,6 @@ document.documentElement.setAttribute('data-lang','en');}})();
   </footer>
 
 </div>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>
