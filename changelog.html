@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EON — Changelog / 更新日志</title>
 <link rel="icon" href="icon.png">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <script>
 (function(){try{var l=localStorage.getItem('eon-lang');
 if(!l){l=(navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en';}
@@ -35,8 +35,43 @@ document.documentElement.setAttribute('data-lang','en');}})();
 
     <div class="release latest">
       <div class="ver">
-        <h3>v1.1.0</h3>
+        <h3>v1.1.1</h3>
         <span class="badge-latest"><span class="zh">最新</span><span class="en">Latest</span></span>
+        <span class="date">2026-07-15</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Import Subscriptions: bring in your data from a generic CSV or an EON-exported JSON file — EON matches the columns for you, then lets you preview, fix, and skip likely duplicates before importing.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>Refined the monthly / quarterly / yearly view of Spending Trends.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Spending Trends amounts now match your monthly total. History follows each subscription’s real start date, and future months are no longer projected.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>导入订阅:支持通用 CSV 与 EON 导出的 JSON —— 自动识别列,导入前可在预览页确认、改错、跳过疑似重复。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>优化支出趋势的月 / 季 / 年展示。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>修复支出趋势的金额口径,现与「本月总额」一致;历史按每笔订阅的真实开始日计算,不再推算未来月份。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.0</h3>
         <span class="date">2026-07-14</span>
       </div>
       <div class="en">
@@ -189,6 +224,6 @@ document.documentElement.setAttribute('data-lang','en');}})();
   </footer>
 
 </div>
-<script src="app.js?v=6"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>
