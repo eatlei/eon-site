@@ -35,8 +35,53 @@ document.documentElement.setAttribute('data-lang','en');}})();
 
     <div class="release latest">
       <div class="ver">
-        <h3>v1.1.6</h3>
+        <h3>v1.1.7</h3>
         <span class="badge-latest"><span class="zh">最新</span><span class="en">Latest</span></span>
+        <span class="date">2026-08-11</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Trash — deleted subscriptions are kept for 30 days and can be restored anytime; archiving still keeps their spending history, the Trash counts toward nothing.</li>
+          <li>Overview layout — drag the panels into the order you want and hide the ones you never use. The layout syncs to your other devices.</li>
+          <li>Edit, Duplicate and Pin on each subscription card; filter the list by type and status.</li>
+          <li>Categories, payment methods, base currency and favourite currencies now sync via iCloud too.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Syncing on one device could wipe a just-added subscription from both ends. Sync now merges record by record, so changes from every device survive.</li>
+          <li>Icons fetched from the App Store fell back to letters, sometimes flickering between the two.</li>
+          <li>Pasting inserted a stray space in front; the first letter of Chinese input broke away from the rest.</li>
+          <li>The caret wouldn’t move in the Notes field and the system paste menu didn’t work there.</li>
+          <li>A pause dated in the future took effect immediately, and subscriptions starting in the future were already counted in the monthly average.</li>
+          <li>Occasional crashes when picking an icon or a custom category while adding a subscription.</li>
+          <li>The category picker was blank on Mac.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>回收站 —— 删掉的订阅保留 30 天，随时可以还原；归档仍旧保留历史花费，回收站里的则完全不计入统计。</li>
+          <li>总览布局 —— 面板可以自己拖动排序、用不上的隐藏掉，设置会同步到你的其他设备。</li>
+          <li>订阅卡片新增「编辑」「复制」「置顶」；列表支持按类型和状态筛选。</li>
+          <li>分类、支付方式、基础货币、常用币种现在也跟着 iCloud 同步。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>在一台设备上同步，可能把另一台刚添加的订阅从两端一起抹掉。同步已改为逐条合并，各设备的改动都留得住。</li>
+          <li>App Store 取来的图标会变回字母，甚至和字母来回闪。</li>
+          <li>粘贴时前面莫名多一个空格；中文输入的第一个字母掉出来，跟后面连不上。</li>
+          <li>备注框里光标移不动，也用不了系统的粘贴菜单。</li>
+          <li>排在未来的暂停会立刻生效；开始时间填在未来的订阅当月就被算进了月均。</li>
+          <li>新增订阅时挑图标、选自定义分类偶发闪退。</li>
+          <li>Mac 上分类选择器是空白的。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.6</h3>
         <span class="date">2026-08-05</span>
       </div>
       <div class="en">
