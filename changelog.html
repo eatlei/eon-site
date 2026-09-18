@@ -1,30 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EON — Changelog / 更新日志</title>
-<link rel="icon" href="icon.png">
-<link rel="stylesheet" href="style.css?v=10">
-<script>
-(function(){try{var l=localStorage.getItem('eon-lang');
-if(!l){l=(navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en';}
-document.documentElement.setAttribute('data-lang',l);}catch(e){
-document.documentElement.setAttribute('data-lang','en');}})();
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>EON — Changelog</title>
+  <meta name="description" content="EON tracks your subscriptions, reminds you before renewals and shows where your money goes. Free, private, on iPhone, iPad and Mac." />
+  <script>
+    (function () {
+      var l;
+      try { l = localStorage.getItem("eon-lang"); } catch (e) {}
+      if (l !== "zh" && l !== "en") l = (navigator.language || "en").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+      var h = document.documentElement;
+      h.setAttribute("data-lang", l);
+      h.setAttribute("lang", l === "zh" ? "zh-Hans" : "en");
+      h.dataset.titleEn = "EON — Changelog";
+      h.dataset.titleZh = "EON —— 更新日志";
+      document.title = l === "zh" ? h.dataset.titleZh : h.dataset.titleEn;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/logo.webp" type="image/webp" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div class="wrap">
+<body class="doc-page">
+  <!-- Night sky + a moon that slowly walks through its phases (drawn in main.js). -->
+  <div class="bg" aria-hidden="true">
+    <canvas class="sky" data-moon="corner"></canvas>
+    <div class="bg-grain"></div>
+  </div>
 
-  <header class="bar">
-    <a class="brand" href="index.html"><img src="icon.png" alt="EON"> EON</a>
-    <div class="langtoggle">
-      <button data-l="zh" onclick="eonSetLang('zh')">中文</button>
-      <button data-l="en" onclick="eonSetLang('en')">EN</button>
-    </div>
-  </header>
+  <div class="page">
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="EON">
+        <img src="assets/logo.webp" alt="" width="52" height="52" />
+      </a>
 
-  <main class="doc">
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html"><span class="en">Home</span><span class="zh">首页</span></a>
+        <a class="nav-link is-active" aria-current="page" href="changelog.html"><span class="en">Changelog</span><span class="zh">更新日志</span></a>
+        <a class="nav-link" href="privacy.html"><span class="en">Privacy</span><span class="zh">隐私</span></a>
+        <a class="nav-link" href="contact.html"><span class="en">Contact</span><span class="zh">联系</span></a>
+      </nav>
+
+      <div class="lang" role="group" aria-label="Language / 语言">
+        <button type="button" data-l="zh" lang="zh-Hans">中</button>
+        <button type="button" data-l="en" lang="en">EN</button>
+      </div>
+
+      <a class="sign-in" href="https://apps.apple.com/app/id6771706897" data-href-en="https://apps.apple.com/app/id6771706897" data-href-zh="https://apps.apple.com/cn/app/id6771706897" target="_blank" rel="noopener"><i class="fa-brands fa-apple" aria-hidden="true"></i> <span class="en">Download</span><span class="zh">下载</span></a>
+
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="menu-overlay" hidden></div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+      <a class="mobile-link" href="index.html" style="--i: 0"><span class="en">Home</span><span class="zh">首页</span></a>
+      <a class="mobile-link is-active" aria-current="page" href="changelog.html" style="--i: 1"><span class="en">Changelog</span><span class="zh">更新日志</span></a>
+      <a class="mobile-link" href="privacy.html" style="--i: 2"><span class="en">Privacy</span><span class="zh">隐私</span></a>
+      <a class="mobile-link" href="contact.html" style="--i: 3"><span class="en">Contact</span><span class="zh">联系</span></a>
+      <a class="mobile-sign-in" href="https://apps.apple.com/app/id6771706897" data-href-en="https://apps.apple.com/app/id6771706897" data-href-zh="https://apps.apple.com/cn/app/id6771706897" target="_blank" rel="noopener" style="--i: 4"><i class="fa-brands fa-apple" aria-hidden="true"></i> <span class="en">Download on the App Store</span><span class="zh">在 App Store 下载</span></a>
+    </nav>
+
+    <main class="doc-main">
+      <p class="kicker anim" style="--d: 0.05s"><span class="en">Release history</span><span class="zh">版本记录</span></p>
+      <article class="doc anim" style="--d: 0.15s">
     <h1><span class="zh">更新日志</span><span class="en">Changelog</span></h1>
     <p class="muted">
       <span class="zh">EON 的版本更新记录。</span>
@@ -628,18 +673,21 @@ document.documentElement.setAttribute('data-lang','en');}})();
     </div>
 
     </div>
-  </main>
+  </article>
+    </main>
 
-  <footer>
-    <div class="links">
-      <a href="index.html"><span class="zh">首页</span><span class="en">Home</span></a>
-      <a href="privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy</span></a>
-      <a href="terms.html"><span class="zh">使用条款</span><span class="en">Terms</span></a>
-    </div>
-    <p>© 2026 EON · <a href="mailto:leonguooct@gmail.com">leonguooct@gmail.com</a></p>
-  </footer>
+    <footer class="doc-footer">
+      <div class="doc-footer-links">
+        <a href="index.html"><span class="en">Home</span><span class="zh">首页</span></a>
+        <a href="changelog.html"><span class="en">Changelog</span><span class="zh">更新日志</span></a>
+        <a href="privacy.html"><span class="en">Privacy</span><span class="zh">隐私政策</span></a>
+        <a href="terms.html"><span class="en">Terms</span><span class="zh">使用条款</span></a>
+        <a href="contact.html"><span class="en">Contact</span><span class="zh">联系</span></a>
+      </div>
+      <p>© 2026 EON · <a href="mailto:hi@thisleon.com">hi@thisleon.com</a></p>
+    </footer>
+  </div>
 
-</div>
-<script src="app.js?v=10"></script>
+  <script src="main.js"></script>
 </body>
 </html>

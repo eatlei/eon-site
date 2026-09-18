@@ -1,91 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EON — Subscription Tracker</title>
-<link rel="icon" href="icon.png">
-<link rel="stylesheet" href="style.css?v=9">
-<script>
-(function(){try{var l=localStorage.getItem('eon-lang');
-if(!l){l=(navigator.language||'en').toLowerCase().indexOf('zh')===0?'zh':'en';}
-document.documentElement.setAttribute('data-lang',l);}catch(e){
-document.documentElement.setAttribute('data-lang','en');}})();
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>EON — Every Subscription, In Its Phase</title>
+  <meta name="description" content="EON tracks your subscriptions, reminds you before renewals and shows where your money goes. Free, private, on iPhone, iPad and Mac." />
+  <script>
+    (function () {
+      var l;
+      try { l = localStorage.getItem("eon-lang"); } catch (e) {}
+      if (l !== "zh" && l !== "en") l = (navigator.language || "en").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+      var h = document.documentElement;
+      h.setAttribute("data-lang", l);
+      h.setAttribute("lang", l === "zh" ? "zh-Hans" : "en");
+      h.dataset.titleEn = "EON — Every Subscription, In Its Phase";
+      h.dataset.titleZh = "EON：订阅管理 —— 每一笔订阅，都有它的月相";
+      document.title = l === "zh" ? h.dataset.titleZh : h.dataset.titleEn;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/logo.webp" type="image/webp" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div class="wrap">
+<body class="home">
+  <!-- Night sky + a moon that slowly walks through its phases (drawn in main.js). -->
+  <div class="bg" aria-hidden="true">
+    <canvas class="sky" data-moon="hero"></canvas>
+    <div class="bg-grain"></div>
+  </div>
 
-  <header class="bar">
-    <a class="brand" href="index.html"><img src="icon.png" alt="EON"> EON</a>
-    <div class="langtoggle">
-      <button data-l="zh" onclick="eonSetLang('zh')">中文</button>
-      <button data-l="en" onclick="eonSetLang('en')">EN</button>
-    </div>
-  </header>
+  <div class="page">
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="EON">
+        <img src="assets/logo.webp" alt="" width="52" height="52" />
+      </a>
 
-  <section class="hero">
-    <img class="appicon" src="icon.png" alt="EON app icon">
-    <h1>EON</h1>
-    <p class="tag">
-      <span class="zh">看清你的每一笔订阅</span>
-      <span class="en">See every subscription clearly</span>
-    </p>
-    <p class="sub">
-      <span class="zh">EON 帮你记录订阅、提前提醒续费、看清钱花在了哪里 —— 简洁、好看、隐私优先。</span>
-      <span class="en">EON tracks your subscriptions, reminds you before renewals, and shows where your money goes — simple, beautiful, and privacy-first.</span>
-    </p>
-  </section>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link is-active" aria-current="page" href="index.html"><span class="en">Home</span><span class="zh">首页</span></a>
+        <a class="nav-link" href="changelog.html"><span class="en">Changelog</span><span class="zh">更新日志</span></a>
+        <a class="nav-link" href="privacy.html"><span class="en">Privacy</span><span class="zh">隐私</span></a>
+        <a class="nav-link" href="contact.html"><span class="en">Contact</span><span class="zh">联系</span></a>
+      </nav>
 
-  <section class="features">
-    <div class="card">
-      <div class="emoji">📊</div>
-      <h3><span class="zh">总览统计</span><span class="en">Overview &amp; stats</span></h3>
-      <p><span class="zh">月 / 季 / 年总额、分类饼图、累计支付,一眼看清。</span>
-         <span class="en">Monthly, quarterly &amp; yearly totals, a category breakdown, and lifetime spend at a glance.</span></p>
-    </div>
-    <div class="card">
-      <div class="emoji">🔔</div>
-      <h3><span class="zh">续费提醒</span><span class="en">Renewal reminders</span></h3>
-      <p><span class="zh">扣费前本地通知,还能一键加到 Apple 提醒事项。</span>
-         <span class="en">Local notifications before each charge — optionally added to Apple Reminders.</span></p>
-    </div>
-    <div class="card">
-      <div class="emoji">🌍</div>
-      <h3><span class="zh">多币种</span><span class="en">Multi-currency</span></h3>
-      <p><span class="zh">每天自动更新汇率,统一折算成你的主币种。</span>
-         <span class="en">Daily exchange-rate updates, all converted to your base currency.</span></p>
-    </div>
-    <div class="card">
-      <div class="emoji">☁️</div>
-      <h3><span class="zh">iCloud 同步</span><span class="en">iCloud sync</span></h3>
-      <p><span class="zh">多设备同步;数据只在你自己的 iCloud,我们看不到。</span>
-         <span class="en">Sync across devices through your own iCloud — we never see it.</span></p>
-    </div>
-    <div class="card">
-      <div class="emoji">🧩</div>
-      <h3><span class="zh">桌面小组件</span><span class="en">Widgets</span></h3>
-      <p><span class="zh">下次扣费、本月总额、本月清单,主屏锁屏随时一眼看到。</span>
-         <span class="en">Next charge, monthly total, and this month's list on your Home &amp; Lock Screen.</span></p>
-    </div>
-    <div class="card">
-      <div class="emoji">🔒</div>
-      <h3><span class="zh">隐私优先</span><span class="en">Privacy-first</span></h3>
-      <p><span class="zh">无账号、无广告、无追踪,数据留在你的设备上。</span>
-         <span class="en">No account, no ads, no tracking — your data stays on device.</span></p>
-    </div>
-  </section>
+      <div class="lang" role="group" aria-label="Language / 语言">
+        <button type="button" data-l="zh" lang="zh-Hans">中</button>
+        <button type="button" data-l="en" lang="en">EN</button>
+      </div>
 
-  <footer>
-    <div class="links">
-      <a href="privacy.html"><span class="zh">隐私政策</span><span class="en">Privacy</span></a>
-      <a href="terms.html"><span class="zh">使用条款</span><span class="en">Terms</span></a>
-      <a href="changelog.html"><span class="zh">更新日志</span><span class="en">Changelog</span></a>
-    </div>
-    <p>© 2026 EON · <a href="mailto:leonguooct@gmail.com">leonguooct@gmail.com</a></p>
-  </footer>
+      <a class="sign-in" href="https://apps.apple.com/app/id6771706897" data-href-en="https://apps.apple.com/app/id6771706897" data-href-zh="https://apps.apple.com/cn/app/id6771706897" target="_blank" rel="noopener"><i class="fa-brands fa-apple" aria-hidden="true"></i> <span class="en">Download</span><span class="zh">下载</span></a>
 
-</div>
-<script src="app.js?v=9"></script>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="menu-overlay" hidden></div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+      <a class="mobile-link is-active" aria-current="page" href="index.html" style="--i: 0"><span class="en">Home</span><span class="zh">首页</span></a>
+      <a class="mobile-link" href="changelog.html" style="--i: 1"><span class="en">Changelog</span><span class="zh">更新日志</span></a>
+      <a class="mobile-link" href="privacy.html" style="--i: 2"><span class="en">Privacy</span><span class="zh">隐私</span></a>
+      <a class="mobile-link" href="contact.html" style="--i: 3"><span class="en">Contact</span><span class="zh">联系</span></a>
+      <a class="mobile-sign-in" href="https://apps.apple.com/app/id6771706897" data-href-en="https://apps.apple.com/app/id6771706897" data-href-zh="https://apps.apple.com/cn/app/id6771706897" target="_blank" rel="noopener" style="--i: 4"><i class="fa-brands fa-apple" aria-hidden="true"></i> <span class="en">Download on the App Store</span><span class="zh">在 App Store 下载</span></a>
+    </nav>
+
+    <main class="hero">
+      <div class="trust anim" style="--d: 0.05s">
+        <span class="trust-avatar a1" title="iPhone"><span class="trust-inner"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></span></span>
+        <span class="trust-avatar a2" title="iPad"><span class="trust-inner"><i class="fa-solid fa-tablet-screen-button" aria-hidden="true"></i></span></span>
+        <span class="trust-avatar a3" title="Mac"><span class="trust-inner"><i class="fa-solid fa-laptop" aria-hidden="true"></i></span></span>
+        <span class="trust-pill"><span class="en">Free on iPhone, iPad &amp; Mac</span><span class="zh">iPhone · iPad · Mac 免费使用</span></span>
+      </div>
+
+      <h1 class="headline anim">
+        <span class="en">
+          <span class="line" style="--ld: 0.12s">Every Subscription</span>
+          <span class="line" style="--ld: 0.3s">In Its Phase</span>
+        </span>
+        <span class="zh">
+          <span class="line dot-cjk" style="--ld: 0.12s">每一笔订阅</span>
+          <span class="line dot-cjk" style="--ld: 0.3s">都有它的月相</span>
+        </span>
+      </h1>
+
+      <p class="subhead anim" style="--d: 0.28s">
+        <span class="en">Track every renewal, get reminded before you're charged, and see where your money goes — private by design, synced through your own iCloud.</span><span class="zh">记下每一次续费，扣费前提醒你，看清钱都花在了哪里 —— 隐私优先，只通过你自己的 iCloud 同步。</span>
+      </p>
+
+      <a class="cta anim" href="https://apps.apple.com/app/id6771706897" data-href-en="https://apps.apple.com/app/id6771706897" data-href-zh="https://apps.apple.com/cn/app/id6771706897" target="_blank" rel="noopener" style="--d: 0.4s"><i class="fa-brands fa-apple" aria-hidden="true"></i> <span class="en">Get EON</span><span class="zh">免费下载</span></a>
+    </main>
+
+    <footer class="stats" aria-label="EON">
+      <div class="stat anim" style="--d: 0.50s">
+        <span class="stat-icon" aria-hidden="true">$</span>
+        <span class="stat-value" data-target="48" data-suffix="" data-decimals="0">0</span>
+        <span class="stat-label"><span class="en">Currencies, rates updated daily</span><span class="zh">种货币，汇率每日更新</span></span>
+      </div>
+      <div class="stat anim" style="--d: 0.58s">
+        <span class="stat-icon" aria-hidden="true">#</span>
+        <span class="stat-value" data-target="210" data-suffix="" data-decimals="0">0</span>
+        <span class="stat-label"><span class="en">Built-in service icons</span><span class="zh">个内置服务图标</span></span>
+      </div>
+      <div class="stat anim" style="--d: 0.66s">
+        <span class="stat-icon" aria-hidden="true">*</span>
+        <span class="stat-value" data-target="8" data-suffix="" data-decimals="0">0</span>
+        <span class="stat-label"><span class="en">Languages</span><span class="zh">种语言</span></span>
+      </div>
+      <div class="stat anim" style="--d: 0.74s">
+        <span class="stat-icon" aria-hidden="true">%</span>
+        <span class="stat-value" data-target="100" data-suffix="%" data-decimals="0">0%</span>
+        <span class="stat-label"><span class="en">Free — no ads, no account</span><span class="zh">免费 · 无广告 · 无需注册</span></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
