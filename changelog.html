@@ -35,8 +35,194 @@ document.documentElement.setAttribute('data-lang','en');}})();
 
     <div class="release latest">
       <div class="ver">
-        <h3>v1.1.7</h3>
+        <h3>v1.1.11</h3>
         <span class="badge-latest"><span class="zh">最新</span><span class="en">Latest</span></span>
+        <span class="date">2026-09-18</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>A redesigned Add Subscription screen — name and amount sit right at the top in large type. Currency and billing cycle are tappable pills, and one-time purchases live in the cycle menu.</li>
+          <li>Sub Persona has moved to Settings → Little Toys and opens as a sheet, so its buttons are never cut off on smaller iPhones.</li>
+          <li>Archiving a subscription tells you where to restore it.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>Ready for iOS 27: the Add button is its own capsule again, and Cancel / Save on the Add screen are always visible.</li>
+          <li>Card colours now match each subscription’s icon.</li>
+          <li>More reliable iCloud sync when switching accounts, on first sync, and when iCloud storage is full.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Some subscriptions disappeared when re-importing a large list after erasing data.</li>
+          <li>Tapping Filter or Sort on the Subscriptions tab brought up the keyboard.</li>
+          <li>On Mac, the list now fits the actual window width when you make the window narrow.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>新增订阅页重做 —— 名称和金额放到最上面，大字直接输入；币种和周期变成胶囊，点一下就能切，买断也并进了周期菜单。</li>
+          <li>订阅人格搬进「设置 → 小玩具」，改为底部弹窗，小屏手机上按钮不再被挡住。</li>
+          <li>归档后会告诉你去哪里恢复。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>适配 iOS 27：「新增」按钮重新独立成胶囊，新增页的「取消 / 保存」不再看不见。</li>
+          <li>订阅卡片的底色和图标颜色对上了。</li>
+          <li>iCloud 同步更稳：切换账号、首次同步、存储配额已满都能正确处理。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>清空后重新导入大量订阅时，部分订阅会被吞掉。</li>
+          <li>订阅页点筛选 / 排序会弹出键盘。</li>
+          <li>Mac 上窗口拖窄后，列表会按实际宽度排列。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.10</h3>
+        <span class="date">2026-09-11</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Built-in icon library — 210 common subscription icons, organised by category, including services you won’t find on the App Store such as iCloud+ and Apple One.</li>
+          <li>Manual renewals can now be paid early. After you mark a charge as paid, Upcoming moves on to the next cycle, with clear feedback when you tap.</li>
+          <li>Erase All Data at the bottom of iCloud & Data, behind two confirmations.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Two devices each holding an older copy of your data could keep overwriting each other and never agree. Records without a timestamp now follow iCloud, and you can choose to keep this device’s data instead.</li>
+          <li>Due to Pay listed every unpaid cycle from the past year; it now only asks about the latest one.</li>
+          <li>Tapping “Mark as paid” several times in a row could pay several cycles at once.</li>
+          <li>Lifetime spending details showed an average (total ÷ charges) instead of the real charges, so subscriptions with price changes didn’t add up.</li>
+          <li>Icon sync on Mac could get stuck at 1/17.</li>
+          <li>Adding a subscription crashed on the iOS 27 beta.</li>
+          <li>On Mac, collapsing or expanding the sidebar made content jump left before settling, and the New button sat too close to the window corner.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>The subscription list no longer plays an entrance animation on every card.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>内置图标库 —— 按分类收录 210 个常用订阅图标，iCloud+、Apple One 这类 App Store 搜不到的服务也有。</li>
+          <li>手动续费可以提前支付；标记已付后「即将扣费」直接跳到下一期，点下去有明确反馈。</li>
+          <li>「iCloud 与数据」底部新增「清空所有数据」，两道确认后才会执行。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>两台设备各自拿着一份旧数据时，会互相覆盖、永远对不齐。没有时间戳的记录改以 iCloud 为准，也可以选择以本机数据为准。</li>
+          <li>「待付款」把过去一年没标记的每一期都列出来，现在只提醒最近一期。</li>
+          <li>连点几下「标记已付」会一次付掉好几期。</li>
+          <li>累计支付明细显示的是「累计 ÷ 次数」的平均值，调过价的订阅数字对不上，现在按真实账单列出。</li>
+          <li>Mac 上图标同步卡在 1/17 不动。</li>
+          <li>iOS 27 beta 上新增订阅必闪退。</li>
+          <li>Mac 上收起 / 展开侧边栏时内容先跑到左边再回来，「新增」按钮贴着窗口边角。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>订阅列表去掉了每张卡片的进场动效，打开更干脆。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.9</h3>
+        <span class="date">2026-09-03</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>EON now runs on iOS 17 and later.</li>
+          <li>Text mode for Overview — turn all the cards into a short, neatly typeset summary.</li>
+          <li>22 more currencies (48 in total), including BOB, ARS, PLN and ZAR; amounts use each currency’s own decimal places.</li>
+          <li>Tap the total to see how it breaks down; group the list by recurring vs one-time; show amounts in two currencies; a summary bar for search results.</li>
+          <li>Deleting a subscription now asks for confirmation.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Sync could report success when it had failed, and could overwrite iCloud data it couldn’t read. It now does neither.</li>
+          <li>Card view stopped at 40 subscriptions when scrolling to the bottom.</li>
+          <li>Export skipped paused subscriptions, and importing EON’s own JSON dropped several fields.</li>
+          <li>Lifetime spending ranked subscriptions differently on Overview and on its detail page.</li>
+          <li>A device could give up on iCloud icon sync for good after a single failure.</li>
+          <li>Expired trials still showed as trials; the paused date and pull-to-refresh sync misbehaved.</li>
+          <li>Three settings pages were missing from the iPad sidebar.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>支持 iOS 17 及以上系统。</li>
+          <li>总览「纯文字模式」—— 一键把所有卡片变成一篇排版整齐的小结。</li>
+          <li>新增 22 个常用币种（共 48 个），含玻利维亚诺、阿根廷比索、兹罗提、兰特等；小数位按各币种自己的规则显示。</li>
+          <li>点总额看明细；列表可按周期 / 买断分组；支持双币显示；搜索结果带汇总栏。</li>
+          <li>删除订阅前会先确认。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>同步失败时会误报成功，还可能用读不出来的数据覆盖 iCloud。两种情况都不会再发生。</li>
+          <li>卡片模式下列表滑到底只有 40 条。</li>
+          <li>导出漏掉已暂停的订阅；导入 EON 自己导出的 JSON 会丢字段。</li>
+          <li>累计支付在总览和二级页里的排名对不上。</li>
+          <li>图标的 iCloud 同步失败一次后就彻底放弃。</li>
+          <li>过期的试用仍显示为试用；暂停日期、下拉同步表现异常。</li>
+          <li>iPad 侧边栏漏掉了三个设置页。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.8</h3>
+        <span class="date">2026-08-21</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Categories are now one unified list — built-in and your own are equal: rename, recolour, change the icon, reorder or delete any of them, up to 24.</li>
+          <li>Precise category search, pinyin search for categories and notes, and search by amount, payment method or archived subscriptions.</li>
+          <li>Your subscription persona now reflects which services you subscribe to, not just their categories.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>Five persona illustrations showed a white box behind the character.</li>
+          <li>Renaming a category in the editor could quietly change its colour.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>Opening the subscription list is much faster (it could take over 3 seconds), and switching tabs is smoother.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>分类合并成一张表 —— 预置和自建完全平等：都能改名、改色、换图标、拖动排序、删除，最多 24 个。</li>
+          <li>分类精确搜索；拼音搜索扩展到分类和备注；金额、支付方式、已归档订阅也能搜。</li>
+          <li>订阅人格改看你订阅了哪些服务，不再只看分类。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>有 5 张人格插画背后带着一块白色方块。</li>
+          <li>编辑分类时只改名字，颜色却被悄悄改掉。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>点开订阅列表更快了（以前可能要卡 3 秒多），切换标签页更顺。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.7</h3>
         <span class="date">2026-08-11</span>
       </div>
       <div class="en">
