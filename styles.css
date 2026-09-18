@@ -1212,3 +1212,28 @@ html[data-lang="zh"] .doc h2 {
     margin-left: 60px;
   }
 }
+
+/* Very short screens (a phone held sideways): let the home page scroll instead of
+   squeezing everything into one viewport, where the headline would overlap the rest. */
+@media (max-height: 520px) {
+  body.home {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  body.home .bg {
+    position: fixed;
+  }
+
+  body.home .page {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  body.home .hero {
+    flex: none;
+    padding: 36px 0;
+  }
+}
