@@ -7,19 +7,20 @@
 }
 
 :root {
-  /* Moon-phase palette — taken from the EON icon: pale gold crescent + moon-blue disc. */
-  --bg: #04050b;
+  /* Moon-phase palette — taken from the 1.2 icon: near-black sky, a warm ivory moon,
+     teal light on its left edge and amber on its right. */
+  --bg: #07080a;
   --text: #f6f1e6;
-  --muted: #8f93a6;
-  --moon-gold: #f2d9a0;
-  --moon-blue: #cad8f4;
-  --nav-text: #1f2230;
-  --pill-dark: rgba(22, 25, 40, 0.72);
+  --muted: #8e9196;
+  --moon-gold: #fce4b4;
+  --moon-teal: #a9d6da;
+  --nav-text: #1b1c20;
+  --pill-dark: rgba(18, 20, 24, 0.72);
   --sign-in-text: #e6e1d4;
   --nav-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
-  --trust-bg: rgba(22, 25, 40, 0.72);
-  --trust-border: rgba(202, 216, 244, 0.35);
-  --trust-text: #d7d9e4;
+  --trust-bg: rgba(18, 20, 24, 0.72);
+  --trust-border: rgba(170, 212, 216, 0.35);
+  --trust-text: #d9d8d4;
   --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
   --font-display: "BubbledotICG-FinePos", "Geist Pixel Circle", monospace;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -65,8 +66,8 @@ button {
   inset: 0;
   overflow: hidden;
   background:
-    radial-gradient(120% 80% at 50% 110%, #141a33 0%, transparent 60%),
-    radial-gradient(90% 60% at 50% -10%, #0d1024 0%, transparent 70%),
+    radial-gradient(90% 70% at 12% 108%, #0a2125 0%, transparent 60%),
+    radial-gradient(80% 60% at 96% -6%, #1b1408 0%, transparent 65%),
     var(--bg);
 }
 
@@ -138,7 +139,7 @@ button {
   border-radius: 50%;
   background: #08090c;
   overflow: hidden;
-  box-shadow: var(--nav-shadow);
+  box-shadow: 0 0 0 1px var(--trust-border), var(--nav-shadow);
   transition: transform 0.3s var(--ease-out);
 }
 
@@ -222,7 +223,7 @@ button {
 }
 
 .sign-in:hover {
-  background: rgba(34, 38, 60, 0.85);
+  background: rgba(30, 33, 38, 0.85);
   color: #fff;
   transform: translateY(-1px);
 }
@@ -291,7 +292,7 @@ button {
   position: fixed;
   inset: 0;
   z-index: 1;
-  background: rgba(4, 5, 11, 0.62);
+  background: rgba(7, 8, 10, 0.62);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   animation: overlayIn 0.28s ease both;
@@ -346,7 +347,7 @@ button {
   margin-top: 10px;
   padding: 14px;
   border-radius: 999px;
-  background: #161a2b;
+  background: #141519;
   color: var(--sign-in-text);
   text-align: center;
   font-weight: 500;
@@ -408,8 +409,8 @@ button {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: linear-gradient(145deg, #fbf6ea 0%, var(--moon-blue) 100%);
-  color: #1c2033;
+  background: linear-gradient(145deg, #e9e0d4 0%, var(--moon-gold) 100%);
+  color: #17181c;
   font-size: calc(var(--trust-size) * 0.34);
   line-height: 1;
 }
@@ -441,7 +442,7 @@ button {
   letter-spacing: -0.04em;
   line-height: 1.12;
   color: var(--text);
-  text-shadow: 0 0 28px rgba(4, 5, 11, 0.55);
+  text-shadow: 0 0 28px rgba(7, 8, 10, 0.55);
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
@@ -461,8 +462,8 @@ button {
   font-size: clamp(calc(13.5px + 2pt), calc(1.55vw + 2pt), calc(16.5px + 2pt));
   font-weight: 400;
   line-height: 1.55;
-  color: #dcdfea;
-  text-shadow: 0 1px 2px rgba(4, 5, 11, 0.55), 0 1px 18px rgba(4, 5, 11, 0.7);
+  color: #dedcd6;
+  text-shadow: 0 1px 2px rgba(7, 8, 10, 0.55), 0 1px 18px rgba(7, 8, 10, 0.7);
 }
 
 .cta {
@@ -474,23 +475,23 @@ button {
   border-radius: 999px;
   gap: 8px;
   background: linear-gradient(135deg, #fff8e8 0%, var(--moon-gold) 100%);
-  color: #14172a;
+  color: #16130d;
   font-weight: 600;
   font-size: clamp(13.5px, 1.5vw, 14.5px);
   letter-spacing: -0.01em;
   box-shadow:
-    0 0 0 1px rgba(242, 217, 160, 0.25),
-    0 0 22px rgba(242, 217, 160, 0.38),
-    0 0 44px rgba(202, 216, 244, 0.14);
+    0 0 0 1px rgba(252, 228, 180, 0.25),
+    0 0 22px rgba(252, 228, 180, 0.38),
+    0 0 44px rgba(170, 212, 216, 0.14);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease;
 }
 
 .cta:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow:
-    0 0 0 1px rgba(242, 217, 160, 0.35),
-    0 0 30px rgba(242, 217, 160, 0.55),
-    0 0 64px rgba(202, 216, 244, 0.24);
+    0 0 0 1px rgba(252, 228, 180, 0.35),
+    0 0 30px rgba(252, 228, 180, 0.55),
+    0 0 64px rgba(170, 212, 216, 0.24);
 }
 
 /* ---------- Stats ---------- */
@@ -775,7 +776,7 @@ html[lang="zh-Hans"] body {
 
 .lang button.is-active {
   background: linear-gradient(135deg, #fff8e8 0%, var(--moon-gold) 100%);
-  color: #14172a;
+  color: #16130d;
   opacity: 1;
 }
 
@@ -791,7 +792,7 @@ html[lang="zh-Hans"] body {
   -webkit-background-clip: text;
   background-clip: text;
   text-shadow: none;
-  filter: drop-shadow(0 0 18px rgba(4, 5, 11, 0.55));
+  filter: drop-shadow(0 0 18px rgba(7, 8, 10, 0.55));
 }
 
 .headline .dot-cjk {
@@ -865,12 +866,12 @@ body.menu-open.doc-page {
   display: block;
   padding: clamp(24px, 4vw, 48px);
   border-radius: 28px;
-  background: rgba(12, 14, 26, 0.58);
-  border: 1px solid rgba(202, 216, 244, 0.14);
+  background: rgba(12, 13, 16, 0.58);
+  border: 1px solid rgba(170, 212, 216, 0.14);
   -webkit-backdrop-filter: blur(18px) saturate(1.2);
   backdrop-filter: blur(18px) saturate(1.2);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-  color: #d9dbe6;
+  color: #d9d8d4;
   font-size: 15.5px;
   line-height: 1.7;
 }
@@ -926,7 +927,7 @@ html[data-lang="zh"] .doc h2 {
 .doc a {
   color: var(--moon-gold);
   text-decoration: underline;
-  text-decoration-color: rgba(242, 217, 160, 0.35);
+  text-decoration-color: rgba(252, 228, 180, 0.35);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s ease;
 }
@@ -945,15 +946,15 @@ html[data-lang="zh"] .doc h2 {
 }
 
 .doc li::marker {
-  color: var(--moon-blue);
+  color: var(--moon-teal);
 }
 
 .doc code {
   padding: 1px 7px;
   border-radius: 6px;
-  background: rgba(202, 216, 244, 0.1);
-  border: 1px solid rgba(202, 216, 244, 0.14);
-  color: var(--moon-blue);
+  background: rgba(170, 212, 216, 0.1);
+  border: 1px solid rgba(170, 212, 216, 0.14);
+  color: var(--moon-teal);
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   font-size: 0.86em;
 }
@@ -971,7 +972,7 @@ html[data-lang="zh"] .doc h2 {
 .release {
   position: relative;
   padding: 26px 0 8px 28px;
-  border-left: 1px solid rgba(202, 216, 244, 0.16);
+  border-left: 1px solid rgba(170, 212, 216, 0.16);
 }
 
 .release::before {
@@ -982,15 +983,15 @@ html[data-lang="zh"] .doc h2 {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #1a1f38;
-  border: 1px solid rgba(202, 216, 244, 0.4);
+  background: #16181c;
+  border: 1px solid rgba(170, 212, 216, 0.4);
 }
 
 /* The latest release gets a full "moon". */
 .release.latest::before {
   background: radial-gradient(circle at 35% 35%, #fff8e8, var(--moon-gold) 60%, #c9a86a);
   border-color: transparent;
-  box-shadow: 0 0 16px rgba(242, 217, 160, 0.6);
+  box-shadow: 0 0 16px rgba(252, 228, 180, 0.6);
 }
 
 .release .ver {
@@ -1014,7 +1015,7 @@ html[data-lang="zh"] .doc h2 {
   padding: 3px 10px;
   border-radius: 999px;
   background: linear-gradient(135deg, #fff8e8 0%, var(--moon-gold) 100%);
-  color: #14172a;
+  color: #16130d;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -1034,7 +1035,7 @@ html[data-lang="zh"] .doc h2 {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--moon-blue);
+  color: var(--moon-teal);
 }
 
 .release ul {
@@ -1063,7 +1064,7 @@ html[data-lang="zh"] .doc h2 {
 }
 
 .doc-footer a {
-  color: #c9ccd8;
+  color: #cbcac6;
   transition: color 0.2s ease;
 }
 
@@ -1106,14 +1107,14 @@ html[data-lang="zh"] .doc h2 {
   margin: 0;
   padding: 14px 16px;
   border-radius: 18px;
-  background: rgba(202, 216, 244, 0.05);
-  border: 1px solid rgba(202, 216, 244, 0.1);
+  background: rgba(170, 212, 216, 0.05);
+  border: 1px solid rgba(170, 212, 216, 0.1);
   transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .contact-row:hover {
-  background: rgba(202, 216, 244, 0.08);
-  border-color: rgba(242, 217, 160, 0.25);
+  background: rgba(170, 212, 216, 0.08);
+  border-color: rgba(252, 228, 180, 0.25);
 }
 
 .contact-icon {
@@ -1124,8 +1125,8 @@ html[data-lang="zh"] .doc h2 {
   height: 44px;
   border-radius: 12px;
   font-size: 19px;
-  color: #14172a;
-  background: linear-gradient(145deg, #fbf6ea 0%, var(--moon-blue) 100%);
+  color: #16130d;
+  background: linear-gradient(145deg, #e9e0d4 0%, var(--moon-gold) 100%);
 }
 
 .contact-xhs {
@@ -1164,7 +1165,7 @@ html[data-lang="zh"] .doc h2 {
   margin-top: 2px;
   font-size: 12.5px;
   font-weight: 400;
-  color: #b7bbca;
+  color: #b9b9b6;
   font-variant-numeric: tabular-nums;
 }
 
@@ -1174,9 +1175,9 @@ html[data-lang="zh"] .doc h2 {
   align-items: center;
   gap: 7px;
   padding: 9px 15px;
-  border: 1px solid rgba(242, 217, 160, 0.35);
+  border: 1px solid rgba(252, 228, 180, 0.35);
   border-radius: 999px;
-  background: rgba(242, 217, 160, 0.08);
+  background: rgba(252, 228, 180, 0.08);
   color: var(--moon-gold);
   font: 500 13px var(--font-sans);
   text-decoration: none;
@@ -1185,13 +1186,13 @@ html[data-lang="zh"] .doc h2 {
 }
 
 .doc .contact-action:hover {
-  background: rgba(242, 217, 160, 0.16);
+  background: rgba(252, 228, 180, 0.16);
   transform: translateY(-1px);
 }
 
 .contact-action.is-copied {
-  border-color: rgba(202, 216, 244, 0.5);
-  color: var(--moon-blue);
+  border-color: rgba(170, 212, 216, 0.5);
+  color: var(--moon-teal);
 }
 
 @media (max-width: 520px) {

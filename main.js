@@ -36,7 +36,7 @@
      Night sky + moon phases
      ======================================================================
      The moon walks new → full → new on a slow loop — a nod to billing cycles.
-     Colours come from the EON icon: pale-gold light fading into moon blue.
+     Colours come from the 1.2 icon: warm ivory light with a cool teal edge.
 
      ?phase=0.5 freezes it at one phase (0 new · 0.25 first quarter · 0.5 full). */
 
@@ -44,9 +44,9 @@
   const ctx = canvas.getContext("2d");
   const mode = canvas.dataset.moon === "corner" ? "corner" : "hero";
   const CYCLE_MS = 36000;
-  const GOLD = [242, 217, 160];
-  const BLUE = [202, 216, 244];
-  const CREAM = [246, 241, 230];
+  const GOLD = [252, 228, 180];
+  const BLUE = [170, 212, 216];
+  const CREAM = [240, 232, 220];
   const pinned = parseFloat(new URLSearchParams(location.search).get("phase"));
   const pinnedPhase = Number.isFinite(pinned) ? ((pinned % 1) + 1) % 1 : null;
   const canFilter = "filter" in ctx;
@@ -98,11 +98,11 @@
     t.arc(c, c, r, 0, Math.PI * 2);
     t.clip();
 
-    // Base: pale gold (bottom-left) → cream → moon blue (top-right), like the icon.
+    // Base: warm gold (bottom-left) → ivory → cool teal-white (top-right), like the icon.
     const base = t.createLinearGradient(c - r, c + r, c + r, c - r);
     base.addColorStop(0, `rgb(${GOLD})`);
     base.addColorStop(0.5, `rgb(${CREAM})`);
-    base.addColorStop(1, `rgb(${BLUE})`);
+    base.addColorStop(1, "rgb(206, 224, 224)");
     t.fillStyle = base;
     t.fillRect(0, 0, size, size);
 
@@ -111,9 +111,9 @@
     [[-0.3, -0.25, 0.34], [0.18, -0.05, 0.26], [-0.08, 0.32, 0.22], [0.38, 0.3, 0.16],
      [0.3, -0.42, 0.14], [-0.45, 0.12, 0.18], [0.02, -0.5, 0.12]].forEach(([x, y, s]) => {
       const g = t.createRadialGradient(c + x * r, c + y * r, 0, c + x * r, c + y * r, s * r);
-      g.addColorStop(0, "rgba(96, 106, 146, 0.30)");
-      g.addColorStop(0.7, "rgba(96, 106, 146, 0.12)");
-      g.addColorStop(1, "rgba(96, 106, 146, 0)");
+      g.addColorStop(0, "rgba(92, 104, 108, 0.30)");
+      g.addColorStop(0.7, "rgba(92, 104, 108, 0.12)");
+      g.addColorStop(1, "rgba(92, 104, 108, 0)");
       t.fillStyle = g;
       t.fillRect(0, 0, size, size);
     });
@@ -127,7 +127,7 @@
       const cr = (rand() * rand() * 0.07 + 0.012) * r;
       t.beginPath();
       t.arc(x, y, cr, 0, Math.PI * 2);
-      t.fillStyle = "rgba(80, 88, 124, 0.22)";
+      t.fillStyle = "rgba(78, 88, 92, 0.22)";
       t.fill();
       t.beginPath();
       t.arc(x - cr * 0.18, y - cr * 0.18, cr, Math.PI * 0.85, Math.PI * 1.85);
@@ -140,15 +140,15 @@
     for (let i = 0; i < 900; i++) {
       const a = rand() * Math.PI * 2;
       const d = Math.sqrt(rand());
-      t.fillStyle = rand() < 0.5 ? "rgba(255,255,255,0.10)" : "rgba(60,66,96,0.10)";
+      t.fillStyle = rand() < 0.5 ? "rgba(255,255,255,0.10)" : "rgba(58,64,68,0.10)";
       t.fillRect(c + Math.cos(a) * d * r, c + Math.sin(a) * d * r, 1.2 * DPR, 1.2 * DPR);
     }
 
     // Limb darkening — makes it read as a sphere, not a disc.
     const limb = t.createRadialGradient(c - r * 0.15, c - r * 0.15, r * 0.2, c, c, r);
     limb.addColorStop(0, "rgba(255, 255, 255, 0.08)");
-    limb.addColorStop(0.75, "rgba(10, 12, 30, 0)");
-    limb.addColorStop(1, "rgba(10, 12, 30, 0.38)");
+    limb.addColorStop(0.75, "rgba(8, 10, 12, 0)");
+    limb.addColorStop(1, "rgba(8, 10, 12, 0.38)");
     t.fillStyle = limb;
     t.fillRect(0, 0, size, size);
     t.restore();
@@ -304,7 +304,7 @@
       ctx.translate(x, y);
       ctx.beginPath();
       ctx.arc(0, 0, mr, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(26, 31, 56, 0.7)";
+      ctx.fillStyle = "rgba(22, 24, 28, 0.7)";
       ctx.fill();
       ctx.strokeStyle = `rgba(${BLUE}, ${0.25 + near * 0.4})`;
       ctx.lineWidth = 0.8;
@@ -343,7 +343,7 @@
     ctx.save();
     ctx.beginPath();
     ctx.arc(cx, cy, r, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(20, 24, 44, 0.8)";
+    ctx.fillStyle = "rgba(16, 18, 22, 0.8)";
     ctx.fill();
     ctx.globalAlpha = 0.09;
     ctx.drawImage(tex, x, y, size, size);
