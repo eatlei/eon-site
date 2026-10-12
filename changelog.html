@@ -23,7 +23,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="assets/logo.webp" type="image/webp" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="doc-page">
@@ -80,8 +81,130 @@
 
     <div class="release latest">
       <div class="ver">
-        <h3>v1.1.11</h3>
+        <h3>v1.2.0</h3>
         <span class="badge-latest"><span class="zh">最新</span><span class="en">Latest</span></span>
+        <span class="date">2026-10-12</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Moon phases — every subscription has its moon. The closer the charge, the fuller the moon, and it’s full on billing day. You’ll see it in the compact views and on the Upcoming cards.</li>
+          <li>Subscription details now open with a full cycle of moons around the icon, name and countdown. For long cycles such as yearly plans, the moon starts growing in the last 30 days.</li>
+          <li>New widgets: Subscription Moon (small and medium on the Home Screen, circular and rectangular on the Lock Screen), Subscription Orbits, and an Upcoming timeline that supports the extra-large size in iOS 27.</li>
+          <li>Settings → Little Toys → Subscription Orbits: your next charges drawn as orbits, shareable as an image.</li>
+          <li>A new app icon. It’s dark by default; switch to Auto or Light in Settings → Appearance.</li>
+          <li>Record a plan upgrade or downgrade in one step: “Restart Cycle” in the timeline starts the new cycle that day, and you can enter the difference you paid.</li>
+          <li>Split subscriptions can show the full bill next to your share (Settings → Currency).</li>
+          <li>Paid so far now shows subscriptions and one-time purchases separately.</li>
+          <li>Export JSON with icons, so custom icons survive a move to a new phone.</li>
+          <li>A new “How It Works” page in Settings.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>Filters stay open while you pick several.</li>
+          <li>The tab bar minimizes as you scroll down (iOS 26 and later).</li>
+          <li>Identical in-app purchases made on the same day are merged into one row.</li>
+          <li>Type the number of days directly when changing to a custom cycle.</li>
+          <li>Import understands more ways of writing a cycle: lifetime, semi-annual, every 3 months…</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>All cards occasionally turned the same colour after returning to the app.</li>
+          <li>Scrolling a list sometimes pressed a card instead of scrolling.</li>
+          <li>“Cycle not recognized” when importing a file.</li>
+          <li>Status badges wrapping onto two lines.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>月相 —— 每一笔订阅，都有它的月相。离扣费越近，月亮越圆；扣费当天是满月。紧凑列表和首页的即将扣费卡片上都能看到。</li>
+          <li>订阅详情顶部多了一整轮月相，把图标、名称和倒计时围在中间。年付这类长周期，最后 30 天月亮才开始变圆。</li>
+          <li>新的小组件：订阅月相（主屏小号 / 中号，锁屏圆形 / 长条）、订阅星图，以及即将扣费时间轴（支持 iOS 27 的超大尺寸）。</li>
+          <li>设置 → 小玩具 → 订阅星图：最近几笔订阅各占一条轨道，可以存成图分享。</li>
+          <li>新图标，默认深色，可在「设置 → 外观」改成自动或浅色。</li>
+          <li>升级 / 降级套餐一步记完：时间轴新增「重新起算」，新周期从当天开始，还能填补差价。</li>
+          <li>分摊的订阅可以在列表里同时显示账单全额（设置 → 货币）。</li>
+          <li>累计支付分开显示订阅和买断各花了多少。</li>
+          <li>导出 JSON 可以带上图标，换手机不丢自定义图标。</li>
+          <li>设置里新增「使用说明」。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>筛选可以连续多选，不再点一下就关闭。</li>
+          <li>往下滑动时底部标签栏自动收起（iOS 26 及以上）。</li>
+          <li>同一天买的多份相同内购合并成一行。</li>
+          <li>改周期时，自定义天数可以直接输入。</li>
+          <li>导入能认出更多周期写法：买断、半年付、每 3 个月……</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>回到 App 时，所有卡片偶尔变成同一种颜色。</li>
+          <li>上下滑动列表时容易误触卡片、滑不动。</li>
+          <li>导入文件时提示「周期无法识别」。</li>
+          <li>状态标签被折成两行。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.12</h3>
+        <span class="date">2026-09-27</span>
+      </div>
+      <div class="en">
+        <h4>New</h4>
+        <ul>
+          <li>Upcoming is now a deck of cards you can flick through; “All” opens a timeline of the next 7, 30 or 90 days.</li>
+          <li>A full Subscription Calendar page — a month view plus a year view, with each subscription’s icon on its charge day.</li>
+          <li>Two new list styles, Compact List and Compact Cards, alongside a progress bar for the current cycle on every card.</li>
+          <li>Cost splitting for shared and family plans — totals count only your share.</li>
+          <li>Card colours: more accurate automatic colours, manual picks, and 2–3 colour gradients.</li>
+          <li>Multi-select and batch actions in the subscription list, plus swipe actions on list cards.</li>
+          <li>Pin your favourite currencies to the top, or show only those.</li>
+        </ul>
+        <h4>Improved</h4>
+        <ul>
+          <li>A single icon set across the app and its widgets.</li>
+          <li>The tab bar uses filled icons that change colour when selected; detail pages share one width on iPad and Mac.</li>
+          <li>American Express added to payment methods; symbols for currencies such as the Australian dollar display correctly.</li>
+        </ul>
+        <h4>Fixed</h4>
+        <ul>
+          <li>The Subscription Calendar no longer jumps up and down when switching months or the year view.</li>
+          <li>Long names no longer push the countdown off the Upcoming cards.</li>
+          <li>Category details could get dragged off the top of the screen.</li>
+        </ul>
+      </div>
+      <div class="zh">
+        <h4>新增</h4>
+        <ul>
+          <li>「即将扣费」换成可以左右甩的翻卡；点「全部」进入时间轴，看未来 7 / 30 / 90 天。</li>
+          <li>订阅日历有了完整的一页 —— 月视图加全年视图，扣费当天放上订阅的图标。</li>
+          <li>新增「紧凑列表」「紧凑卡片」两种视图，每张卡片多了本期进度条。</li>
+          <li>费用分摊：拼车、家庭组的订阅，统计只算自己那份。</li>
+          <li>卡片颜色：自动取色更准，也可以手动选色，或用 2～3 色渐变。</li>
+          <li>订阅列表支持多选和批量操作，列表卡片可以左右滑。</li>
+          <li>常用货币可以置顶，或只看常用。</li>
+        </ul>
+        <h4>优化</h4>
+        <ul>
+          <li>全 App 和小组件换成同一套图标。</li>
+          <li>底部标签栏改为实心图标，选中变色；iPad / Mac 的详情页统一了宽度。</li>
+          <li>支付方式新增美国运通；澳元等货币符号显示修正。</li>
+        </ul>
+        <h4>修复</h4>
+        <ul>
+          <li>订阅日历切换月份 / 全年时不再上下跳。</li>
+          <li>即将扣费卡片上，倒计时不再被长名字挤掉。</li>
+          <li>分类详情页的内容可能被拖到屏幕上方。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="release">
+      <div class="ver">
+        <h3>v1.1.11</h3>
         <span class="date">2026-09-18</span>
       </div>
       <div class="en">
